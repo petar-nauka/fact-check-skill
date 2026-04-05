@@ -21,8 +21,7 @@ Combines the **SIFT methodology**, the **CRAAP test**, **prebunking/inoculation 
 
 - **11-step analysis pipeline** with claim decomposition, multi-language search, lateral reading, origin tracing, red flag detection (40+ markers across 6 categories), and MFS severity scoring
 - **Educational component** — teaches users to independently evaluate information (manipulation technique recognition, lateral reading method, source credibility lessons, prebunking vaccines)
-- **Multi-language support** — searches in Bulgarian, English, Russian, and other relevant languages
-- **Bulgarian context awareness** — knows local disinformation patterns, fact-checking resources (Factcheck.bg, Detector.bg, AFP Proveri), and media landscape
+- **Multi-language support** — searches across languages relevant to the claim (English, local language, source language)
 - **Works on Claude.ai** without web tools (knowledge-based fallback with stated limitations)
 - **Consistent HTML output** with dark/light theme, print support, mobile-friendly, WCAG AA contrast
 
@@ -54,13 +53,15 @@ Upload `fact-check.skill` as a custom skill in Claude.ai settings.
 ## Usage Examples
 
 ```
-"Видях тази публикация: 'ЕС забрани домашните градини!' Истина ли е?"
+"I saw this post on Facebook: 'The EU has banned home gardens! Starting 2026,
+anyone growing their own vegetables without a permit will be fined up to €5000.
+Share before they delete this!' Is this true?"
 
-"Is it true that NASA confirmed 3 days of darkness?"
+"Is it true that NASA confirmed 3 days of complete darkness in December 2026?"
 
 "Compare these two articles about climate change: [URL1] [URL2]"
 
-"Какви фалшиви наративи се разпространяват за ваксините в България?"
+"What false narratives are currently spreading about vaccines in Europe?"
 ```
 
 ## Research Basis
