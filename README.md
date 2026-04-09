@@ -2,6 +2,8 @@
 
 Advanced semi-automated fact-checking, disinformation detection, and media literacy skill for Claude Code and Claude.ai.
 
+Codex-only fact-check skill for verifying claims, comparing sources, and spotting misinformation. (fact-check-skill-codex-only.zip)
+
 ## What it does
 
 Produces visual **Fact-Check Cards** (HTML) with verdict, confidence calibration, source scoring, manipulation technique detection, origin tracing, and educational tips.
