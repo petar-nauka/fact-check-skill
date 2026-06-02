@@ -1,4 +1,4 @@
-# Fact-Check Skill for Claude
+# Fact-Check Skill for Claude and Codex
 
 Advanced semi-automated fact-checking, disinformation detection, and media literacy skill for Claude Code and Claude.ai.
 
