@@ -52,7 +52,7 @@ previous package artifacts.
 Install by copying the `fact-check` directory to:
 
 ```text
-C:\Users\petar\.codex\skills\fact-check
+C:\Users\******\.codex\skills\fact-check
 ```
 
 Keep a backup of any existing installed skill before replacing it.
