@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "mode": "comparison",
+    "language": "en",
+    "analysis_date": "2026-06-28",
+    "topic": "EU energy policy"
+  },
+  "content_summary": "Two articles make conflicting claims about whether a proposed EU energy measure bans household heating technologies immediately.",
+  "overall_verdict": {
+    "verdict": "mixed",
+    "confidence_level": "medium",
+    "summary": "One source accurately notes a policy proposal, while the other overstates it as an immediate ban."
+  },
+  "scores": {
+    "cfs": 45,
+    "mts": 35,
+    "scd": 30,
+    "mfs": 39,
+    "interpretation": "Some concern: the conflict turns on timing and legal status."
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "text": "The EU proposal would immediately ban existing household heating systems.",
+      "type": "factual",
+      "verdict": "misleading",
+      "confidence_level": "medium",
+      "reasoning": "The available official source describes a proposal and transition rules, not an immediate removal requirement.",
+      "source_ids": ["S1", "S2"]
+    },
+    {
+      "id": "C2",
+      "text": "The measure is still subject to policy process and implementation rules.",
+      "type": "factual",
+      "verdict": "mostly_true",
+      "confidence_level": "medium",
+      "reasoning": "Official EU materials support the distinction between proposal, adoption, and implementation.",
+      "source_ids": ["S1"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "name": "European Commission policy page",
+      "url": "https://commission.europa.eu/",
+      "tier": 2,
+      "site_rating": "Established and transparent",
+      "author": "European Commission",
+      "evidence_quality": "Strong",
+      "contribution": "Provides the official policy framing and process status.",
+      "accessed": "2026-06-28",
+      "access_note": "Sample fixture source",
+      "independence": "Primary institutional source"
+    },
+    {
+      "id": "S2",
+      "name": "Sensational article under comparison",
+      "tier": 7,
+      "site_rating": "Questionable",
+      "author": "Unidentified",
+      "evidence_quality": "Weak",
+      "contribution": "Uses the word ban without showing the legal text or timing.",
+      "accessed": "2026-06-28",
+      "access_note": "Sample fixture source",
+      "independence": "Original source under review"
+    }
+  ],
+  "red_flags": [
+    {
+      "code": "C3",
+      "label": "Context stripped",
+      "severity": "medium",
+      "explanation": "The source removes the difference between a proposal and immediate enforcement."
+    }
+  ],
+  "educational_notes": [
+    "For EU policy claims, check whether a text is a proposal, adopted law, or national implementation rule."
+  ],
+  "share_safe_summary": "The stronger evidence supports that this is a policy-process claim, not proof of an immediate household ban. The legal status and timing matter here.",
+  "disclaimer": "This is AI-assisted analysis and should be checked against the current official EU legal text before legal or policy decisions."
+}

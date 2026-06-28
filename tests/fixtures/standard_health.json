@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "mode": "standard",
+    "language": "en",
+    "analysis_date": "2026-06-28"
+  },
+  "content_summary": "A social media post claims that raw vaccine adverse-event reports prove vaccines caused thousands of deaths.",
+  "overall_verdict": {
+    "verdict": "misleading",
+    "confidence_level": "high",
+    "summary": "Adverse-event reports are signals for investigation, not proof of causation. The claim misrepresents what these databases can show."
+  },
+  "scores": {
+    "cfs": 55,
+    "mts": 45,
+    "scd": 35,
+    "mfs": 48,
+    "interpretation": "Caution advised: the claim uses a real data source in a misleading causal frame."
+  },
+  "claims": [
+    {
+      "id": "C1",
+      "text": "Adverse-event reports prove that vaccines caused thousands of deaths.",
+      "type": "statistical",
+      "verdict": "misleading",
+      "confidence_level": "high",
+      "reasoning": "Passive adverse-event databases record reports after an event and are designed to detect possible safety signals. They do not establish that a vaccine caused the reported event.",
+      "source_ids": ["S1", "S2", "S3"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "name": "WHO vaccine safety guidance",
+      "url": "https://www.who.int/",
+      "tier": 2,
+      "site_rating": "Established and transparent",
+      "author": "World Health Organization",
+      "evidence_quality": "Strong",
+      "contribution": "Explains that safety monitoring reports are evaluated as signals and require causality assessment.",
+      "accessed": "2026-06-28",
+      "access_note": "Sample fixture source",
+      "independence": "Independent institutional source"
+    },
+    {
+      "id": "S2",
+      "name": "EMA pharmacovigilance information",
+      "url": "https://www.ema.europa.eu/",
+      "tier": 2,
+      "site_rating": "Established and transparent",
+      "author": "European Medicines Agency",
+      "evidence_quality": "Strong",
+      "contribution": "Provides regulator context on adverse-event reporting and causality assessment.",
+      "accessed": "2026-06-28",
+      "access_note": "Sample fixture source",
+      "independence": "Independent institutional source"
+    },
+    {
+      "id": "S3",
+      "name": "Reuters Fact Check",
+      "url": "https://www.reuters.com/fact-check/",
+      "tier": 1,
+      "site_rating": "Established and transparent",
+      "author": "Reuters fact-checking team",
+      "evidence_quality": "Strong",
+      "contribution": "Documents recurring misuse of adverse-event databases in viral vaccine claims.",
+      "accessed": "2026-06-28",
+      "access_note": "Sample fixture source",
+      "independence": "Independent editorial source"
+    }
+  ],
+  "red_flags": [
+    {
+      "code": "E5",
+      "label": "Adverse-event reports used as causation proof",
+      "severity": "high",
+      "explanation": "The post treats raw reports as confirmed causal evidence."
+    },
+    {
+      "code": "A3",
+      "label": "Urgent sharing cue",
+      "severity": "medium",
+      "explanation": "The framing asks readers to spread the claim before checking context."
+    }
+  ],
+  "educational_notes": [
+    "A report that follows a medical intervention is not the same as proof that the intervention caused it.",
+    "For health claims, prefer regulator assessments, systematic reviews, and clear causality analysis."
+  ],
+  "share_safe_summary": "I checked this because health claims matter. Adverse-event databases are used to detect possible safety signals, but the reports do not by themselves prove causation.",
+  "disclaimer": "This is AI-assisted analysis, not medical advice; consult qualified health authorities for medical decisions."
+}

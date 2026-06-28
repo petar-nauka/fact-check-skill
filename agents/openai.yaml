@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fact Check"
+  short_description: "Verify claims and detect misinformation"
+  default_prompt: "Use $fact-check to verify this claim and summarize the evidence."

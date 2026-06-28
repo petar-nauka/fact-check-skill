@@ -1,0 +1,74 @@
+{
+  "metadata": {
+    "mode": "prebunking",
+    "language": "en",
+    "analysis_date": "2026-06-28",
+    "topic": "election misinformation"
+  },
+  "content_summary": "A topic-level briefing on recurring election misinformation narratives and how to recognize them before sharing.",
+  "overall_verdict": {
+    "verdict": "unverified",
+    "confidence_level": "medium",
+    "summary": "This is a prebunking briefing rather than a verdict on one claim."
+  },
+  "narratives": [
+    {
+      "id": "N1",
+      "claim": "If a candidate loses, the result must have been manipulated.",
+      "techniques": ["D2", "A4"],
+      "spread_level": "medium",
+      "truth": "Election results require evidence-based challenge procedures; losing alone is not evidence of manipulation.",
+      "defense_tip": "Ask for the specific polling station, document, procedure, and independent confirmation.",
+      "source_ids": ["S1", "S2"]
+    },
+    {
+      "id": "N2",
+      "claim": "Viral screenshots prove ballots were changed.",
+      "techniques": ["F1", "C4"],
+      "spread_level": "low",
+      "truth": "Screenshots need original links, metadata, and confirmation from election authorities or observers.",
+      "defense_tip": "Do not share screenshots without a primary source or archive.",
+      "source_ids": ["S1"]
+    }
+  ],
+  "sources": [
+    {
+      "id": "S1",
+      "name": "Central Election Commission",
+      "tier": 2,
+      "site_rating": "Established and transparent",
+      "author": "Election authority",
+      "evidence_quality": "Strong",
+      "contribution": "Primary source for procedures, official results, and decisions.",
+      "accessed": "2026-06-28",
+      "access_note": "Sample fixture source",
+      "independence": "Primary institutional source"
+    },
+    {
+      "id": "S2",
+      "name": "OSCE election observation materials",
+      "url": "https://www.osce.org/odihr/elections",
+      "tier": 5,
+      "site_rating": "Established and transparent",
+      "author": "OSCE ODIHR",
+      "evidence_quality": "Strong",
+      "contribution": "Provides observation methodology and context for election integrity claims.",
+      "accessed": "2026-06-28",
+      "access_note": "Sample fixture source",
+      "independence": "Independent expert organization"
+    }
+  ],
+  "red_flags": [
+    {
+      "code": "D2",
+      "label": "Blanket delegitimization",
+      "severity": "high",
+      "explanation": "The narrative rejects election outcomes without specific falsifiable evidence."
+    }
+  ],
+  "educational_notes": [
+    "Election claims should be checked against official protocols, observer reports, and specific evidence, not only viral posts."
+  ],
+  "share_safe_summary": "Before sharing election fraud claims, look for specific documents, procedures, and independent confirmation. A viral screenshot alone is not enough.",
+  "disclaimer": "This is AI-assisted prebunking guidance, not a final judgment on any specific election claim."
+}

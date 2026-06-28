@@ -1,0 +1,31 @@
+name: Validate skill
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate skill frontmatter
+        shell: pwsh
+        run: |
+          python .\scripts\validate_skill.py .
+
+      - name: Run renderer tests
+        shell: pwsh
+        run: |
+          python -m unittest discover -s tests
+
+      - name: Build upload archives
+        shell: pwsh
+        run: |
+          python scripts\package_skill.py --layout folder --output dist\fact-check-codex.zip
+          python scripts\package_skill.py --layout root --output dist\fact-check-chatgpt-upload.zip

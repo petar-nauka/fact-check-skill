@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/fact-check-result.schema.json",
+  "title": "Fact Check Result",
+  "type": "object",
+  "required": [
+    "metadata",
+    "content_summary",
+    "overall_verdict",
+    "sources",
+    "share_safe_summary",
+    "disclaimer"
+  ],
+  "properties": {
+    "metadata": {
+      "type": "object",
+      "required": ["mode", "language", "analysis_date"],
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["quick", "standard", "comparison", "prebunking"]
+        },
+        "language": {"type": "string"},
+        "analysis_date": {"type": "string"},
+        "topic": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "content_summary": {"type": "string"},
+    "overall_verdict": {
+      "type": "object",
+      "required": ["verdict", "confidence_level", "summary"],
+      "properties": {
+        "verdict": {
+          "type": "string",
+          "enum": ["confirmed", "mostly_true", "mixed", "unverified", "misleading", "false"]
+        },
+        "confidence_level": {
+          "type": "string",
+          "enum": ["low", "medium", "high"]
+        },
+        "summary": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "scores": {
+      "type": "object",
+      "required": ["cfs", "mts", "scd"],
+      "properties": {
+        "cfs": {"type": "number", "minimum": 0, "maximum": 100},
+        "mts": {"type": "number", "minimum": 0, "maximum": 100},
+        "scd": {"type": "number", "minimum": 0, "maximum": 100},
+        "mfs": {"type": "number", "minimum": 0, "maximum": 100},
+        "interpretation": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "claims": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/claim"}
+    },
+    "narratives": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/narrative"}
+    },
+    "sources": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/source"}
+    },
+    "red_flags": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/red_flag"}
+    },
+    "educational_notes": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "share_safe_summary": {"type": "string"},
+    "disclaimer": {"type": "string"}
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "claim": {
+      "type": "object",
+      "required": ["id", "text", "type", "verdict", "reasoning", "source_ids"],
+      "properties": {
+        "id": {"type": "string"},
+        "text": {"type": "string"},
+        "type": {"type": "string"},
+        "verdict": {"type": "string"},
+        "confidence_level": {"type": "string"},
+        "reasoning": {"type": "string"},
+        "source_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "additionalProperties": true
+    },
+    "source": {
+      "type": "object",
+      "required": ["id", "name", "tier", "site_rating", "evidence_quality", "contribution"],
+      "properties": {
+        "id": {"type": "string"},
+        "name": {"type": "string"},
+        "url": {"type": "string"},
+        "tier": {"type": "integer", "minimum": 1, "maximum": 8},
+        "site_rating": {"type": "string"},
+        "author": {"type": "string"},
+        "evidence_quality": {"type": "string"},
+        "contribution": {"type": "string"},
+        "accessed": {"type": "string"},
+        "access_note": {"type": "string"},
+        "independence": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "red_flag": {
+      "type": "object",
+      "required": ["code", "label", "severity", "explanation"],
+      "properties": {
+        "code": {"type": "string"},
+        "label": {"type": "string"},
+        "severity": {"type": "string"},
+        "explanation": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "narrative": {
+      "type": "object",
+      "required": ["id", "claim", "techniques", "spread_level", "truth", "defense_tip", "source_ids"],
+      "properties": {
+        "id": {"type": "string"},
+        "claim": {"type": "string"},
+        "techniques": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "spread_level": {"type": "string"},
+        "truth": {"type": "string"},
+        "defense_tip": {"type": "string"},
+        "source_ids": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      },
+      "additionalProperties": true
+    }
+  }
+}
