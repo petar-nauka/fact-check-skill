@@ -15,7 +15,7 @@
     {
       "id": "N1",
       "claim": "If a candidate loses, the result must have been manipulated.",
-      "techniques": ["D2", "A4"],
+      "techniques": ["C10", "A4"],
       "spread_level": "medium",
       "truth": "Election results require evidence-based challenge procedures; losing alone is not evidence of manipulation.",
       "defense_tip": "Ask for the specific polling station, document, procedure, and independent confirmation.",
@@ -24,7 +24,7 @@
     {
       "id": "N2",
       "claim": "Viral screenshots prove ballots were changed.",
-      "techniques": ["F1", "C4"],
+      "techniques": ["D3", "D2"],
       "spread_level": "low",
       "truth": "Screenshots need original links, metadata, and confirmation from election authorities or observers.",
       "defense_tip": "Do not share screenshots without a primary source or archive.",
@@ -60,8 +60,8 @@
   ],
   "red_flags": [
     {
-      "code": "D2",
-      "label": "Blanket delegitimization",
+      "code": "C10",
+      "label": "Burden-of-proof reversal / blanket delegitimization",
       "severity": "high",
       "explanation": "The narrative rejects election outcomes without specific falsifiable evidence."
     }

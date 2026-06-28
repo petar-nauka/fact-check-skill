@@ -1,5 +1,23 @@
 # Fact Check Skill Changelog
 
+## v3.1
+
+- Expanded `references/educational-tips.md` into a full media-literacy base: per-technique
+  defenses with prebunking "vaccine" framing, a cognitive-biases reference, research citations,
+  general tips (10-second rule, SIFT, lateral reading, image verification), and a **native
+  Bulgarian educational base** for Bulgarian-language output.
+- Added `references/bulgarian-context.md` covering Bulgarian information-space narratives,
+  recurring disinformation patterns, and local data points. Complements the source/search lists
+  in `bg-eu-sources.md`.
+- Broadened the red-flag taxonomy in `references/red-flags.md` (more logical-fallacy and
+  health-specific markers) while keeping the existing JSON `severity` scale and the `red_flags[]`
+  schema unchanged.
+- `SKILL.md`: added an explicit **Step 0** date-anchoring instruction, a **satire/opinion guard**
+  in the non-negotiables, a **corrections-and-updates** (revisions) policy, and Bulgarian/English
+  trigger phrases for better discovery.
+- Harmonized the example red-flag codes in the test fixtures with the expanded taxonomy. No
+  change to the JSON schema, result validator, renderer, packaging, or test behavior.
+
 ## v3.0
 
 - Reworked the skill from one large `SKILL.md` into a concise progressive-disclosure

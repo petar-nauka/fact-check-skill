@@ -67,8 +67,8 @@
   ],
   "red_flags": [
     {
-      "code": "C3",
-      "label": "Context stripped",
+      "code": "D2",
+      "label": "Real facts in misleading context",
       "severity": "medium",
       "explanation": "The source removes the difference between a proposal and immediate enforcement."
     }

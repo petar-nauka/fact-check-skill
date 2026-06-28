@@ -8,7 +8,8 @@ This version keeps `SKILL.md` short and uses progressive disclosure:
 - `SKILL.md` contains trigger metadata, guardrails, mode selection, and the core
   workflow.
 - `references/` contains detailed source-evaluation, red-flag, MFS,
-  Bulgarian/EU source, and output guidance.
+  Bulgarian/EU source, Bulgarian information-space context, media-literacy
+  (educational tips, incl. a native Bulgarian base), and output guidance.
 - `schema/` defines the JSON result contract.
 - `scripts/` validates results, renders HTML cards, and builds clean upload
   archives.

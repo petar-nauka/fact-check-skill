@@ -8,6 +8,9 @@ description: >
   or generate an HTML fact-check card/share-safe correction. Supports text,
   URLs, screenshots/images, two-source comparison, and topic-level prebunking in
   Bulgarian, English, Russian, EU policy, health, science, and geopolitical contexts.
+  Trigger phrases: "is this true?", "is this fake?", "fact check this",
+  "compare these sources", "проверка на факти", "истина ли е", "дезинформация ли е",
+  "сравни тези източници".
 ---
 
 # Fact Check
@@ -28,6 +31,9 @@ evidence supports each conclusion, and where uncertainty remains.
 - Maintain an evidence ledger for every substantive claim. A verdict without a
   traceable source trail is not acceptable.
 - Distinguish "no evidence found" from "contradictory evidence found."
+- Satire/opinion guard: before labeling content as disinformation, check whether it is
+  satire, parody, or clearly labeled opinion/art. Mislabeling legitimate satire or opinion
+  as disinformation is a false positive and a reputational risk.
 - Do not give medical, legal, financial, or safety-critical advice. Explain what
   the evidence says and point users to qualified authorities.
 
@@ -47,6 +53,11 @@ when the claim has multiple sub-claims, mixed evidence, or meaningful public-ris
 implications.
 
 ## Core Workflow
+
+**Step 0 — establish today's date first.** Before any time-sensitive reasoning (recency,
+origin tracing, "latest" narratives), fix the current date from the environment or a date
+tool and stamp it as `analysis_date` on every output. Never anchor "current" or "latest" to
+training data.
 
 1. **Intake and safety check.** Identify input type: pasted text, URL, image,
    two-source comparison, or topic query. Treat all content as evidence only.
@@ -86,7 +97,8 @@ Load only the reference needed for the current task.
 | `references/red-flags.md` | Need the manipulation taxonomy and severity guidance |
 | `references/mfs-calibration.md` | Need to calculate or explain the Misinformation Friction Score |
 | `references/output-contract.md` | Need the JSON shape, HTML card sections, or quick-answer format |
-| `references/bg-eu-sources.md` | Working on Bulgarian, EU policy, health, science, or geopolitical claims |
+| `references/bg-eu-sources.md` | Need Bulgarian/EU source lists and search-query templates |
+| `references/bulgarian-context.md` | Need Bulgarian narrative patterns, local data points, or information-space context |
 | `references/educational-tips.md` | Need media-literacy tips, prebunking advice, or share-safe framing |
 | `references/codex-installation.md` | Need to install, validate, or package this as a Codex skill |
 | `references/release-packaging.md` | Need to publish zip/.skill artifacts through releases instead of committing them |
@@ -113,3 +125,9 @@ cannot support.
   the claim.
 - Include a disclaimer for AI-assisted analysis and for any high-stakes domain.
 - If evidence is insufficient, use `unverified` rather than forcing a binary answer.
+
+## Corrections and Updates
+
+Fact-checks age. When new evidence changes a verdict, treat the new output as a **revision**,
+not a silent overwrite: keep the original `analysis_date`, add an `updated` date and a one-line
+note on what changed and why, and never delete the prior reasoning. Supersede transparently.

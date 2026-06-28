@@ -71,10 +71,10 @@
   ],
   "red_flags": [
     {
-      "code": "E5",
-      "label": "Adverse-event reports used as causation proof",
+      "code": "F2",
+      "label": "VAERS/EudraVigilance misuse (reporting is not causation)",
       "severity": "high",
-      "explanation": "The post treats raw reports as confirmed causal evidence."
+      "explanation": "The post treats raw adverse-event reports as confirmed causal evidence."
     },
     {
       "code": "A3",
